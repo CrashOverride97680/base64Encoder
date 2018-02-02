@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cript Base64 Javacsript</title>
+</head>
+<body>
+  <form action="">
+    <fieldset style="margin:0 auto;width:300;">
+      <legend>criptazione base64</legend>
+      <label for="dataCrypt" style="margin:50;">INSERISCI CODICE DA CRIPTARE IN BASE 64</label>
+      <br/>
+      <br/>
+      <input type="text" name="dataCript" value="" id="dataCript" placeholder="INSERISCI QUI ">
+      <br/>
+      <br/>
+      <label for="result" id="resultConvers"></label>
+    </fieldset>
+  </form>
+</body>
+<script type="text/javascript">
+window.onload=function(){
+  var x = document.getElementById("dataCript");
+  document.getElementById("resultConvers").innerHTML="QUI CI SARA IL RISULTTO DELLA CONVERSIONE";
+  x.onkeyup=function(){
+    var conv = window.btoa((x.value));
+    document.getElementById("resultConvers").innerHTML="Il codice convertito e': "+conv;
+  };
+};
+</script>
+</html>
